@@ -2,25 +2,25 @@ package it.unibo.oop.lab04.robot.base;
 
 /**
  * Models the environment in which a {@link it.unibo.oop.lab04.robot.base.Robot}
- * is situated
+ * is situated.
  *
  */
 public class RobotEnvironment {
 
     /**
-     * Environment upper bound for the X coordinate
+     * Environment upper bound for the X coordinate.
      */
     public static final int X_UPPER_LIMIT = 50;
     /**
-     * Environment lower bound for the X coordinate
+     * Environment lower bound for the X coordinate.
      */
     public static final int X_LOWER_LIMIT = 0;
     /**
-     * Environment upper bound for the Y coordinate
+     * Environment upper bound for the Y coordinate.
      */
     public static final int Y_UPPER_LIMIT = 80;
     /**
-     * Environment lower bound for the X coordinate
+     * Environment lower bound for the X coordinate.
      */
     public static final int Y_LOWER_LIMIT = 0;
 
@@ -34,6 +34,11 @@ public class RobotEnvironment {
         this.position = position;
     }
 
+    /**
+     * 
+     * @param p
+     * @return position condition
+     */
     protected boolean isWithinWorld(final Position2D p) {
         final var x = p.getX();
         final var y = p.getY();
@@ -41,10 +46,10 @@ public class RobotEnvironment {
     }
 
     /**
-     * Move the robot to a new position
+     * Move the robot to a new position.
      * 
-     * @param newX
-     * @param newY
+     * @param dx
+     * @param dy
      * @return A boolean indicating if the robot moved or not (a robot can move
      *         only inside the environment's boundaries)
      */

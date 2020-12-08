@@ -4,6 +4,9 @@ import it.unibo.oop.lab04.robot.base.BaseRobot;
 import it.unibo.oop.lab04.robot.base.RobotEnvironment;
 import it.unibo.oop.lab04.robot.base.RobotPosition;
 
+/**
+ * Utility class for testing componible robots.
+ */
 public final class TestRobots {
 
     private TestRobots() {
@@ -63,6 +66,6 @@ public final class TestRobots {
                 new RobotPosition(RobotEnvironment.X_UPPER_LIMIT, RobotEnvironment.Y_UPPER_LIMIT),
                 r0.getPosition());
         }
-
+        System.out.println(steps);
     }
 }

@@ -24,13 +24,16 @@ public final class TestBank2 {
         final BankAccount acc2 = new RestrictedBankAccount(usr2.getUserID(), 0);
         final var balance1 = usr1.getName() + " " + usr1.getSurname() + " account balance";
         final var balance2 = usr2.getName() + " " + usr2.getSurname() + " account balance";
+
         checkEquality(balance1, 0d, acc1.getBalance());
         checkEquality(balance2, 0d, acc2.getBalance());
-        final double startAmount = 10000;
-        final double withdraw = 15000;
-        final double deposit = 10000;
-        final double expectedFinal1 = 4995;
-        final double expectedFinal2 = 19994.8;
+
+        final double startAmount = 10_000;
+        final double withdraw = 15_000;
+        final double deposit = 10_000;
+        final double expectedFinal1 = 4_995;
+        final double expectedFinal2 = 19_994.8;
+
         acc1.deposit(usr1.getUserID(), startAmount);
         checkEquality(balance1, startAmount, acc1.getBalance());
         acc2.deposit(usr2.getUserID(), startAmount);

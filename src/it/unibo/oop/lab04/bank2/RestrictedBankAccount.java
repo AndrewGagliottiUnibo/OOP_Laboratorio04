@@ -4,18 +4,22 @@ public class RestrictedBankAccount extends AbstractBankAccount {
 
     private static final double TAX_OPERATIONS = 0.1;
 
-    //costruttore
     public RestrictedBankAccount(final int userID, final double balance) {
         super(userID, balance);
     }
 
-    //metodo astratto implementato, transazione possibile se balance >= value
-    protected boolean isWithdrawAllowed(double value) {
+    /**
+     * @param value
+     * @return call to superclass
+     */
+    protected boolean isWithdrawAllowed(final double value) {
         return super.getBalance() >= value;
     }
 
-    //metodo astratto implementato, pago le operazioni e una tassa fissa
+    /**
+     * @return call to superclass
+     */
     protected double computeFee() {
-        return (super.getNTransactions() * TAX_OPERATIONS) + MANAGEMENT_FEE;
+        return super.getNTransactions() * TAX_OPERATIONS + MANAGEMENT_FEE;
     }
 }

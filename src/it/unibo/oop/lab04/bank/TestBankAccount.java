@@ -3,8 +3,8 @@ package it.unibo.oop.lab04.bank;
 //CHECKSTYLE:OFF
 public final class TestBankAccount {
 
-    private static final int DEPOSIT = 10000;
-    private static final int WITHDRAW = 15000;
+    private static final int DEPOSIT = 10_000;
+    private static final int WITHDRAW = 15_000;
 
     private TestBankAccount() {
     }

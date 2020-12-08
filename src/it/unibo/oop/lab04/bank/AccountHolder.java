@@ -12,18 +12,30 @@ public class AccountHolder {
         this.userID = accountID;
     }
 
+    /**
+     * @return the name of the account holder.
+     */
     public String getName() {
         return this.name;
     }
 
+    /**
+     * @return the surname of the account holder.
+     */
     public String getSurname() {
         return this.surname;
     }
 
+    /**
+     * @return the ID of the account holder.
+     */
     public int getUserID() {
         return this.userID;
     }
 
+    /**
+     * @return all data
+     */
     public String toString() {
         return "AccountHolder [name=" + name + ", surname=" + surname + ", userID=" + userID + "]";
     }

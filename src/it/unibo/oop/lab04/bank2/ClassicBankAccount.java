@@ -6,12 +6,17 @@ public class ClassicBankAccount extends AbstractBankAccount {
         super(userID, balance);
     }
 
-    //metodo astratto implementato, transazione sempre possibile
-    protected boolean isWithdrawAllowed(double value) {
+    /**
+     * @param value
+     * @return always true
+     */
+    protected boolean isWithdrawAllowed(final double value) {
         return true;
     }
 
-    //metodo astratto implementato, pago solo una costante
+    /**
+     * @return fee
+     */
     protected double computeFee() {
         return MANAGEMENT_FEE;
     }
